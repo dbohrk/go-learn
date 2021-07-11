@@ -34,6 +34,7 @@ var reader = bufio.NewReader(os.Stdin)
 func (g *Game) Rounds() {
 	// use select to process input in channels
 	for {
+		// Wait until one channels is ready. If both are ready then a random channel is selected.
 		select {
 		case round := <-g.RoundChan:
 			g.Round.RoundNumber = g.Round.RoundNumber + round

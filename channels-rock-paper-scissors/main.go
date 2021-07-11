@@ -18,7 +18,7 @@ func main() {
 		},
 	}
 
-	go game.Rounds()
+	go game.Rounds() // Start Rounds in the game package
 	game.ClearScreen()
 	game.PrintIntro()
 
