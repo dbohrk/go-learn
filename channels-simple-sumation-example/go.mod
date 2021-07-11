@@ -1,0 +1,1 @@
+module "channels-simple-sumation-example"
