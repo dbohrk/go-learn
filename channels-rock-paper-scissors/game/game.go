@@ -12,9 +12,9 @@ import (
 )
 
 const (
-	ROCK     = 0
-	PAPER    = 1
-	SCISSORS = 2
+	ROCK     = 0	// beats Scissors. (scissors +) % 3 =0
+	PAPER    = 1	// beats Rock. (rockj +1) % 3 = 1
+	SCISSORS = 2	// beats Paper. (paper + 1) % 3 = 2
 )
 
 type Game struct {
@@ -128,7 +128,6 @@ Round %d
 
 	if playerValue == computerValue {
 		g.DisplayChan <- "It's a draw!"
-		// *** changed here
 		<-g.DisplayChan
 		return false
 	} else {

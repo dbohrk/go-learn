@@ -16,7 +16,7 @@ func main() {
 	c := make(chan int)
 	go sum(s[:len(s)/2], c)	// The length (6) divided by 2 (3) from the end forward
 	go sum(s[len(s)/2:], c)	// The length (6) divided by 2 (3) from the beginning
-	x, y := <-c, <-c// receive from each concurrent instance of sum() (channel 'c')
+	x, y := <-c, <-c // receive from each concurrent instance of sum() (channel 'c')
 
 	fmt.Println(x, y, x+y)	// Print each return from channel 'c' and sum to two values
 }
