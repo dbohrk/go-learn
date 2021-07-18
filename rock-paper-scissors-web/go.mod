@@ -1,0 +1,1 @@
+module "rock-paper-scissors-web"
